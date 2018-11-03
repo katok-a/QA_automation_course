@@ -27,7 +27,7 @@ public class TestMassive {
     @AfterClass
     public static void tearDown() {
     }
-
+    @Ignore
     @Test
     public void testSumOfElements() {
         mass.array = new int[]{1, 3, 5, 6, 8};
