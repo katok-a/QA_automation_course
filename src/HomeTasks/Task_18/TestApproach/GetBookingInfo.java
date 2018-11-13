@@ -13,10 +13,8 @@ import java.util.ArrayList;
 public class GetBookingInfo {
     static WebDriver driver;
 
-    public static WebDriver createDriver(String pathToExe) {
-        System.setProperty("webdriver.chrome.driver", pathToExe);
-        driver = new ChromeDriver();
-        return driver;
+    public static WebDriver createDriver() {
+        return new ChromeDriver();
     }
 
     public static void findAndClick(String xpath) {
@@ -41,7 +39,7 @@ public class GetBookingInfo {
         return (hotelList.size() > 0);
     }
 
-    public static double getRating(){
+    public static double getRating() {
         driver.get("http://booking.com");
         WebElement enterCity = driver.findElement(By.xpath(".//input[@id='ss']"));
         enterCity.sendKeys("Москва");
@@ -55,7 +53,7 @@ public class GetBookingInfo {
         findAndClick("(.//a[@class='hotel_name_link url'])[1]");
         ArrayList<String> handles = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(handles.get(handles.size() - 1));
-        WebElement rating = driver.findElement(By.xpath("(.//div[@aria-label=\"10\"])[1]"));
+        WebElement rating = driver.findElement(By.xpath("(.//div[@class='bui-review-score__badge'])[1]"));
         return Double.parseDouble(rating.getText().trim());
 
     }

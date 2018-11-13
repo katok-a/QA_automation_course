@@ -11,9 +11,6 @@ import java.util.ArrayList;
 public class Task_18_1 {
     public static void main(String[] args) {
 
-
-        String exePath = "C:\\Java\\Chrome_Server\\chromedriver.exe";
-        System.setProperty("webdriver.chrome.driver", exePath);
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("http://booking.com");

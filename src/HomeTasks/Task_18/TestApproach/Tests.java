@@ -15,7 +15,7 @@ import static HomeTasks.Task_18.TestApproach.GetBookingInfo.isHotels;
 public class Tests {
     @BeforeMethod
     public void setUpDriver(){
-        WebDriver driver = GetBookingInfo.createDriver("C:\\Java\\Chrome_Server\\chromedriver.exe");
+        WebDriver driver = GetBookingInfo.createDriver();
     }
     @AfterMethod
     public void CloseWindow(){
@@ -28,6 +28,7 @@ public class Tests {
     }
     @Test
     public void testRating(){
-        Assert.assertTrue(GetBookingInfo.getRating()>9.0);
+        Double minRating = 9.0;
+        Assert.assertTrue(GetBookingInfo.getRating()>minRating);
     }
 }
