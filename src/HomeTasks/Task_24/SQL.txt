@@ -1,0 +1,27 @@
+1.	SELECT * FROM Categories
+2.	SELECT CategoryID, CategoryName FROM [Categories]
+3.	SELECT Address FROM [Suppliers]
+4.	select * from products order by price desc
+5.	select * from orders order by CustomerID, ShipperID 
+6.	SELECT * FROM [Products] where price > 40 order by price desc
+7.	SELECT * FROM Products where price between 20 and 50 order by Unit
+8.	SELECT * FROM Products where price between 20 and 50 or CategoryID = 6
+9.1.	SELECT * FROM Products where price=46 or price = 53 or price =55
+9.2.	SELECT * FROM Products where price in (46, 53, 55)
+10.1	SELECT * FROM Products where price not in (46, 53, 55)
+10.2	SELECT * FROM Products where not price=46 and not price = 53 and not price =55
+11.	SELECT * FROM [Products] where ProductName like "%han%"
+12.	insert into Shippers (ShipperID, ShipperName, Phone) values (9, "New Shipper", "123456789")
+13.	insert into Shippers (ShipperName, Phone) values ("New Shipper", "123456789")
+14.	insert into categories (CategoryName, Description) SELECT ShipperName, Phone FROM [Shippers]
+15.	insert into [Categories] (CategoryName,	Description) select ShipperName, Phone from Shippers where ShipperName="Speedy Express"
+16.	delete from Shippers where ShipperName="Speedy Express"
+17.	delete from products where Price<50
+18.	delete FROM [Orders]
+19.	update Categories set CategoryName="Drinks" where CategoryName="Beverages"
+20.	update products set price=999 where ProductName="Chais"
+
+
+
+
+
