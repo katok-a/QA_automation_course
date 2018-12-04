@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Emails>
+    <email>
+        <recepient>test1@test1.com</recepient>
+        <subject>testSubject 1</subject>
+        <text>Test Text 1</text>
+    </email>
+
+    <email>
+        <recepient>test2@test2.com</recepient>
+        <subject>testSubject 2</subject>
+        <text>Test Text 2</text>
+    </email>
+
+    <email>
+        <recepient>test3@test3.com</recepient>
+        <subject>testSubject 3</subject>
+        <text>Test Text 3</text>
+    </email>
+</Emails>
